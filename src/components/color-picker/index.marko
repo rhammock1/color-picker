@@ -1,5 +1,13 @@
 import getDefaultColors from '../../util/getDefaultColors';
 
+style {
+    .counter {
+        text-align: center;
+        margin-top: 25px;
+        font: 26px Arial;
+    }
+}
+
 class {
     onInput(input) {
         const colors = input.colors || getDefaultColors();
@@ -12,6 +20,22 @@ class {
     }
 
     handleColorSelected(color) {
+        console.log('color', color)
+
+        if (typeof(color) === 'string') {
+            const find = this.state.colors.find((each) => each.color === color);
+            if (!find) {
+                color = {
+                    color,
+                    counter: 0
+                }
+                this.state.colors.push(color)
+                console.log(this.state.colors)
+            } else {
+                color = find;
+            }
+        }
+        console.log(color)
         color.counter++;
         
         this.state.counter = color.counter;
@@ -23,8 +47,8 @@ class {
 <div>
     <color-header color=state.selectedColor />
     <color-footer colors=state.colors on-color-selected('handleColorSelected') />
-    <p>
-        You have clicked this color: ${state.counter}
+    <p.counter>
+        You have clicked this color: <span style={ color: state.selectedColor.color }>${state.counter}</span>
     </p>
 </div>
 

@@ -12,7 +12,9 @@ module.exports = class {
 
         if (!isValidHexValue(hexInput)) {
             hexInput = this.input.colors[0];
+            return;
         }
+        console.log(hexInput);
 
         this.emit('color-selected', hexInput);
     }

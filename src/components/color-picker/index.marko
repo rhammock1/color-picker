@@ -6,11 +6,15 @@ class {
 
         this.state = {
             selectedColor: colors[0],
-            colors
+            colors,
+            counter: 0
         };
     }
 
     handleColorSelected(color) {
+        color.counter++;
+        
+        this.state.counter = color.counter;
         this.state.selectedColor = color;
     }
 }
@@ -19,6 +23,9 @@ class {
 <div>
     <color-header color=state.selectedColor />
     <color-footer colors=state.colors on-color-selected('handleColorSelected') />
+    <p>
+        You have clicked this color: ${state.counter}
+    </p>
 </div>
 
 

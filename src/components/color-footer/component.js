@@ -18,4 +18,4 @@ module.exports = class {
     }
 };
 
-isValidHexValue = (hexValue) => /^#[0-9A-F]{6}$/1.test(hexValue);
+isValidHexValue = (hexValue) => /^#[0-9A-F]{6}$/i.test(hexValue);

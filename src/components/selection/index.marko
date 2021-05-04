@@ -1,0 +1,23 @@
+class {
+    handleColorSelect() {
+        this.emit('color-selected');
+    }
+}
+
+style {
+    .color-selection {
+        width: 25px;
+        height: 25px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0px 0px 5px;
+        float: left;
+    }
+}
+
+<div.color-selection
+    on-click('handleColorSelect')
+    on-touchstart('handleColorSelect')
+    style={ backgroundColor: input.color }
+    />

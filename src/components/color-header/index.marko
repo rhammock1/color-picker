@@ -1,0 +1,25 @@
+style {
+    .color-header {
+        width: 200px;
+        height: 100px;
+        border-radius: 20px 20px 0 0;
+        font: 30px Arial;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+    }
+    .header > p {
+        padding-top: 1.15em;
+        margin: 0;
+    }
+}
+
+<!-- Marko uses "$" to start single-line JS -- For Multi-line use "$ { JS here }" -->
+$ const color = input.color;
+
+<div.color-header style={backgroundColor: color}>
+    <p>
+        ${color}
+    </p>    
+</div>

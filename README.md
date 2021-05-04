@@ -1,3 +1,7 @@
+# Color Picker
+
+Based on Color Picker tutorial from [Marko](https://markojs.com/docs/color-picker/)
+
 # Thanks for checking out Marko
 
 # Installation

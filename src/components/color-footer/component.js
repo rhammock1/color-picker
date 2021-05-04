@@ -14,7 +14,6 @@ module.exports = class {
             hexInput = this.input.colors[0];
             return;
         }
-        console.log(hexInput);
 
         this.emit('color-selected', hexInput);
     }

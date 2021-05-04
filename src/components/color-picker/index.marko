@@ -20,8 +20,6 @@ class {
     }
 
     handleColorSelected(color) {
-        console.log('color', color)
-
         if (typeof(color) === 'string') {
             const find = this.state.colors.find((each) => each.color === color);
             if (!find) {
@@ -30,12 +28,10 @@ class {
                     counter: 0
                 }
                 this.state.colors.push(color)
-                console.log(this.state.colors)
             } else {
                 color = find;
             }
         }
-        console.log(color)
         color.counter++;
         
         this.state.counter = color.counter;

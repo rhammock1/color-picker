@@ -1,9 +1,3 @@
-class {
-    handleColorSelect() {
-        this.emit('color-selected');
-    }
-}
-
 style {
     .color-selection {
         width: 25px;
@@ -16,8 +10,15 @@ style {
     }
 }
 
+class {
+    // this.emit is similar to websockets communication events
+    handleColorSelect() {
+        this.emit('color-selected');
+    }
+}
+
+<!-- using inline styles to make it dynamic duh -->
 <div.color-selection
     on-click('handleColorSelect')
     on-touchstart('handleColorSelect')
-    style={ backgroundColor: input.color }
-    />
+    style={ backgroundColor: input.color } />

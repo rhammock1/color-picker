@@ -4,7 +4,7 @@ $ const colors = input.colors;
     <div.color-selection-container>
         <for|color| of=colors>
             <div>
-                <!-- Listen for 'color-selected' event emitted from <selection> component and
+                <!-- Listen for 'color-selected' event emitted from <color-selection> component and
                 handle it in this component's 'handleColorSelected' method.
                 NOTE: We pass along the 'color' to the event handler method -->
                 <color-selection color=color on-color-selected('handleColorSelected', color) />

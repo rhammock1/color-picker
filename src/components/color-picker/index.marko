@@ -1,19 +1,8 @@
-<div>
-    <color-header color=state.selectedColor />
-    <color-footer colors=state.colors on-color-selected('handleColorSelected') />
-</div>
-
-<ul>
-    <for|color| of=input.colors>
-        <li style={color: color}>
-            ${color}
-        </li>
-    </for>
-</ul>
+import getDefaultColors from '../../util/getDefaultColors';
 
 class {
     onInput(input) {
-        const colors = input.colors;
+        const colors = input.colors || getDefaultColors();
 
         this.state = {
             selectedColor: colors[0],
@@ -21,4 +10,19 @@ class {
         };
     }
 }
+
+<div>
+    <color-header color=state.selectedColor />
+    <color-footer colors=state.colors on-color-selected('handleColorSelected') />
+</div>
+
+<!-- <ul>
+    <for|color| of=input.colors>
+        <li style={color: color}>
+            ${color}
+        </li>
+    </for>
+</ul> -->
+
+
 

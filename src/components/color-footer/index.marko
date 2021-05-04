@@ -7,7 +7,7 @@ $ const colors = input.colors;
                 <!-- Listen for 'color-selected' event emitted from <selection> component and
                 handle it in this component's 'handleColorSelected' method.
                 NOTE: We pass along the 'color' to the event handler method -->
-                <selection color=color on-color-selected('handleColorSelected', color) />
+                <color-selection color=color on-color-selected('handleColorSelected', color) />
             </div>
         </for>
         <input

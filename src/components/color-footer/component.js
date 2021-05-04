@@ -5,7 +5,7 @@ module.exports = class {
 
     handleHexInput() {
         let hexInput = this.getEl('hexInput').value;
-        console.log(hexInput);
+        
         if (!hexInput.startsWith('#')) {
             hexInput = '#' + hexInput;
         }

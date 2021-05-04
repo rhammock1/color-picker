@@ -5,7 +5,7 @@ module.exports = class {
 
     handleHexInput() {
         let hexInput = this.getEl('hexInput').value;
-
+        console.log(hexInput);
         if (!hexInput.startsWith('#')) {
             hexInput = '#' + hexInput;
         }
@@ -14,7 +14,7 @@ module.exports = class {
             hexInput = this.input.colors[0];
         }
 
-        this.emit('colorSelected', hexInput);
+        this.emit('color-selected', hexInput);
     }
 };
 
